@@ -1,0 +1,25 @@
+function palindrome(str) {
+const len = str.length;
+
+let i = 0;
+let j = str.length - 1;
+
+while (true) {
+  while (i < len && !/[a-zA-Z0-9]/.test(str[i])){
+    i++;
+      }
+      while(j > 0 && !/[a-zA-Z0-9]/.test(str[j])){
+        j--;
+      }
+      if (i >= j){
+        return true;
+      }
+
+      if (str[i].toLowerCase() !== str[j]
+      .toLowerCase()) {
+        return false;
+      }
+      i++;
+      j--;
+}
+}
